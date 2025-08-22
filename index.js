@@ -13,7 +13,7 @@ function createBot() {
 
     // 1️⃣ /login
     setTimeout(() => {
-      bot.chat("/login benbitben")
+      bot.chat("/login benbitbeen")
       console.log("/login komutu gönderildi ✅")
     }, 5000)
 
@@ -29,7 +29,7 @@ function createBot() {
       console.log("/shard balance komutu gönderildi ✅")
     }, 15000)
 
-    // 4️⃣ Her dakika /shard pay obbyzz 1
+    // 4️⃣ Her dakika /shard pay obbyzz 170
     setTimeout(() => {
       setInterval(() => {
         bot.chat("/shard pay obbyzz 1")
@@ -56,4 +56,5 @@ function createBot() {
 }
 
 createBot()
+
 
