@@ -9,20 +9,20 @@ function createBot() {
   })
 
   bot.on('login', () => {
-    console.log("Bot sunucuya bağlandı ✅ 5 saniye sonra /register gönderecek...")
+    console.log("Bot sunucuya bağlandı ✅ Komutlar 5 saniye arayla gönderilecek...")
 
-    // 5 saniye bekle, sonra komutu gönder
+    // İlk komut: /login
     setTimeout(() => {
       bot.chat("/login benbitben")
-      console.log("Komut gönderildi ✅")
-    }, 5000)
-  })
-  setTimeout(() => {
-      bot.chat("/warp afk")
-      console.log("Komut gönderildi ✅")
-    }, 5000)
-  })
+      console.log("/login komutu gönderildi ✅")
+    }, 5000) // 5 saniye bekle
 
+    // İkinci komut: /warp afk
+    setTimeout(() => {
+      bot.chat("/warp afk")
+      console.log("/warp afk komutu gönderildi ✅")
+    }, 10000) // 10 saniye toplam: önce 5s bekle + ikinci komut
+  })
 
   bot.on('end', () => {
     console.log("Bağlantı koptu, 5 sn sonra tekrar bağlanacak...")
@@ -33,4 +33,3 @@ function createBot() {
 }
 
 createBot()
-
