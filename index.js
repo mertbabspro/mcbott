@@ -11,7 +11,7 @@ function createBot() {
     host: "zurnacraft.net",   // Buraya sunucu IP yaz
     port: 25565,                // Port, değişmediyse 25565
     username: "obbyzzafk"     // Cracked server için nick
-    version:"1.19"
+    version: "1.19"
   })
 
   bot.on('login', () => console.log("Bot sunucuya bağlandı ✅ AFK bekliyor..."))
@@ -31,3 +31,4 @@ function createBot() {
 }
 
 createBot()
+
