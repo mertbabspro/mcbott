@@ -32,7 +32,7 @@ function createBot() {
     // 4️⃣ Her dakika /shard pay obbyzz 170
     setTimeout(() => {
       setInterval(() => {
-        bot.chat("/shard pay obbyzz 1")
+        bot.chat("/shard pay obbyzz 180")
         console.log("/shard pay obbyzz 1 komutu gönderildi ✅")
       }, 60000) // 60000ms = 1 dakika
     }, 15000) // Önce balance komutu gönderilsin
@@ -56,5 +56,6 @@ function createBot() {
 }
 
 createBot()
+
 
 
