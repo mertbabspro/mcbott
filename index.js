@@ -1,11 +1,18 @@
 const mineflayer = require('mineflayer')
+const readline = require('readline')
+
+// Konsoldan komut almayı ayarlıyoruz
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+})
 
 function createBot() {
   const bot = mineflayer.createBot({
-    host: "zurnacraft.net",  // Minecraft sunucu IP
-    port: 25565,             // Port
-    username: "obbyzzafk",    // Kullanıcı adı
-    version: "1.19"           // Minecraft sürümü
+    host: "zurnacraft.net",
+    port: 25565,
+    username: "obbyzzafk",
+    version: "1.19"
   })
 
   bot.on('login', () => console.log("Bot sunucuya bağlandı ✅ AFK bekliyor..."))
@@ -16,6 +23,12 @@ function createBot() {
   })
 
   bot.on('error', err => console.log("Hata:", err))
+
+  // Konsoldan girilen komutları sunucuya gönder
+  rl.on('line', (input) => {
+    if(input.startsWith('/')) bot.chat(input)
+    else console.log("Komutlar / ile başlamalı!")
+  })
 }
 
 createBot()
