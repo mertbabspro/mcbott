@@ -13,10 +13,16 @@ function createBot() {
 
     // 5 saniye bekle, sonra komutu gönder
     setTimeout(() => {
-      bot.chat("/register benbitben benbitben")
+      bot.chat("/login benbitben")
       console.log("Komut gönderildi ✅")
     }, 5000)
   })
+  setTimeout(() => {
+      bot.chat("/warp afk")
+      console.log("Komut gönderildi ✅")
+    }, 5000)
+  })
+
 
   bot.on('end', () => {
     console.log("Bağlantı koptu, 5 sn sonra tekrar bağlanacak...")
@@ -27,3 +33,4 @@ function createBot() {
 }
 
 createBot()
+
