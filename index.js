@@ -4,7 +4,7 @@ function createBot() {
   const bot = mineflayer.createBot({
     host: "zurnacraft.net",
     port: 25565,
-    username: "obbyzzafk3",
+    username: "obbyzzafk",
     version: "1.19"
   })
 
@@ -13,7 +13,7 @@ function createBot() {
 
     // 1️⃣ /login
     setTimeout(() => {
-      bot.chat("/register yarrakyarrak1 yarrakyarrak1")
+      bot.chat("/login benbitben")
       console.log("/login komutu gönderildi ✅")
     }, 5000)
 
@@ -56,3 +56,4 @@ function createBot() {
 }
 
 createBot()
+
