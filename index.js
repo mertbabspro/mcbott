@@ -11,17 +11,40 @@ function createBot() {
   bot.on('login', () => {
     console.log("Bot sunucuya bağlandı ✅ Komutlar 5 saniye arayla gönderilecek...")
 
-    // İlk komut: /login
+    // 1️⃣ /login
     setTimeout(() => {
       bot.chat("/login benbitben")
       console.log("/login komutu gönderildi ✅")
-    }, 5000) // 5 saniye bekle
+    }, 5000)
 
-    // İkinci komut: /warp afk
+    // 2️⃣ /warp afk
     setTimeout(() => {
       bot.chat("/warp afk")
       console.log("/warp afk komutu gönderildi ✅")
-    }, 10000) // 10 saniye toplam: önce 5s bekle + ikinci komut
+    }, 10000)
+
+    // 3️⃣ /shard balance
+    setTimeout(() => {
+      bot.chat("/shard balance")
+      console.log("/shard balance komutu gönderildi ✅")
+    }, 15000)
+
+    // 4️⃣ Her dakika /shard pay obbyzz 1
+    setTimeout(() => {
+      setInterval(() => {
+        bot.chat("/shard pay obbyzz 1")
+        console.log("/shard pay obbyzz 1 komutu gönderildi ✅")
+      }, 60000) // 60000ms = 1 dakika
+    }, 15000) // Önce balance komutu gönderilsin
+  })
+
+  // Sunucudan gelen chat mesajlarını logla
+  bot.on('chat', (username, message) => {
+    console.log(`[CHAT] <${username}> ${message}`)
+  })
+
+  bot.on('whisper', (username, message) => {
+    console.log(`[WHISPER] <${username}> ${message}`)
   })
 
   bot.on('end', () => {
