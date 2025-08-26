@@ -3,7 +3,7 @@ const mineflayer = require('mineflayer')
 
 // ---- KULLANICI AYARLARI ----
 const CONFIG = {
-  host: 'zurnacraft.net', // sunucu adresi
+  host: 'oyna.chickennw.com', // sunucu adresi
   port: 25565,            // port
   username: 'obbyzzzafk', // premium değilse bir takma ad
   version: '1.19',        // sunucu sürümü
@@ -92,3 +92,4 @@ function createBot() {
 }
 
 createBot()
+
