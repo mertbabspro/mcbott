@@ -5,7 +5,7 @@ const mineflayer = require('mineflayer')
 const CONFIG = {
   host: 'oyna.chickennw.com', // sunucu adresi
   port: 25565,            // port
-  username: 'obbyzzzafk', // premium değilse bir takma ad
+  username: 'obbyzzafk', // premium değilse bir takma ad
   version: '1.19',        // sunucu sürümü
   registerDelayMs: 10_000 // spawn sonrası /kayıt gecikmesi
 }
@@ -92,4 +92,5 @@ function createBot() {
 }
 
 createBot()
+
 
